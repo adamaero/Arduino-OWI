@@ -29,7 +29,7 @@ struct scratchpad_t {
 } __attribute__((packed));
 
 // Slave device one wire access; use random rom code
-Slave::OWI<BOARD::D66> owi(FAMILY_CODE);					// Pin D7 → D66 (A12)
+Slave::OWI<BOARD::D9> owi(FAMILY_CODE);					// Pin D7 → D66 (A12)
 
 // Scratchpad with temperature, triggers and configuration
 scratchpad_t scratchpad = {

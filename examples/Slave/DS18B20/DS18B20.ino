@@ -41,7 +41,7 @@ scratchpad_t scratchpad = {
 };
 
 // Analog pin used for emulated temperature reading
-const int pin = A0;
+//const int pin = A0;
 
 // Use builtin led; active during conversion delay
 GPIO<BOARD::D13> led;
@@ -65,7 +65,7 @@ void loop()
   int16_t value;
   switch (owi.read()) {
   case CONVERT_T:
-    value = analogRead(pin) - 512;
+    value = 1023 - 512;							// 127.75 C ???
     scratchpad.temperature = (value << 2);
     value >>= 2;
     owi.alarm(value >= scratchpad.high_trigger ||

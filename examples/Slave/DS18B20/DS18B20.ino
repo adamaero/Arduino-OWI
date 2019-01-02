@@ -29,7 +29,7 @@ struct scratchpad_t {
 } __attribute__((packed));
 
 // Slave device one wire access; use random rom code
-Slave::OWI<BOARD::D7> owi(FAMILY_CODE);
+Slave::OWI<BOARD::D66> owi(FAMILY_CODE);					// Pin D7 → D66 (A12)
 
 // Scratchpad with temperature, triggers and configuration
 scratchpad_t scratchpad = {
@@ -65,7 +65,7 @@ void loop()
   int16_t value;
   switch (owi.read()) {
   case CONVERT_T:
-    value = 1023 - 512;							// 127.75 C ???
+    value = 1023 - 512;								// 127.75 C ???
     scratchpad.temperature = (value << 2);
     value >>= 2;
     owi.alarm(value >= scratchpad.high_trigger ||

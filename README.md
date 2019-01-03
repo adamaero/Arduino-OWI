@@ -16,15 +16,11 @@ Version: 1.8
 [ATtiny](./examples/ATtiny) and [DS2482](./examples/DS2482)
 variants.
 
+## Classes
+
+* [Software One-Wire Slave Device, Slave::OWI](./src/Slave/OWI.h)
+* [Programmable Resolution 1-Wire Digital Thermometer, DS18B20](./src/Driver/DS18B20.h)
+
 ## Dependencies
 
 * [Arduino-GPIO](https://github.com/mikaelpatel/Arduino-GPIO)
-
-## Classes
-
-* [Abstract One-Wire Bus Manager and Device Interface, OWI](./src/OWI.h)
-* [Software One-Wire Bus Manager, GPIO, Software::OWI](./src/Software/OWI.h)
-* [Hardware One-Wire Bus Manager, DS2482, Hardware::OWI](./src/Hardware/OWI.h)
-* [Software One-Wire Slave Device, Slave::OWI](./src/Slave/OWI.h)
-* [Programmable Resolution 1-Wire Digital Thermometer, DS18B20](./src/Driver/DS18B20.h)
-* [One-Wire Remote Arduino, Master](./src/Driver/Arduino.h)

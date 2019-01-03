@@ -1,3 +1,6 @@
+# Quick & Dirty
+Under "Dependences" below, download "Arduino-GPIO" (and when extracting take the folder out of the folder of the same name).
+
 # Arduino-OWI
 The OWI library has been developed to support the implementation of
 1-wire bus managers and device drivers. The library includes a GPIO
